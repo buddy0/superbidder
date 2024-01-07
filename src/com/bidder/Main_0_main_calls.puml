@@ -1,0 +1,386 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "com.bidder.Main#main(String[])",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "com.bidder.Main",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1389262348 { 
+   	label=bidder
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1417109310 { 
+   	label=pojo
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_584450950 { 
+   	label=Auction
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Auction214868399XXXaddBids1239537281[
+	label="+ addBids()"
+	style=filled
+	fillcolor=white
+	tooltip="Auction
+
+null"
+	fontcolor=darkgreen
+];
+
+Auction214868399XXXcloseAuction0[
+	label="+ closeAuction()"
+	style=filled
+	fillcolor=white
+	tooltip="Auction
+
+null"
+	fontcolor=darkgreen
+];
+
+Auction214868399XXXupdateBids1239537281[
+	label="+ updateBids()"
+	style=filled
+	fillcolor=white
+	tooltip="Auction
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_958007627 { 
+   	label=Amount
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Amount214868399XXXcompareTo1964981368[
+	label="+ compareTo()"
+	style=filled
+	fillcolor=white
+	tooltip="Amount
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_1417159468 { 
+   	label=repo
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1091211968 { 
+   	label=SellerRepo
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   SellerRepo214818241XXXaddSeller1822147681[
+	label="+ addSeller()"
+	style=filled
+	fillcolor=white
+	tooltip="SellerRepo
+
+null"
+	fontcolor=darkgreen
+];
+
+SellerRepo214818241XXXgetSeller1808118735[
+	label="+ getSeller()"
+	style=filled
+	fillcolor=white
+	tooltip="SellerRepo
+
+null"
+	fontcolor=darkgreen
+];
+
+SellerRepo214818241XXXhasSeller1808118735[
+	label="+ hasSeller()"
+	style=filled
+	fillcolor=white
+	tooltip="SellerRepo
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1829819062 { 
+   	label=BuyerRepo
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   BuyerRepo214818241XXXaddBuyer64557459[
+	label="+ addBuyer()"
+	style=filled
+	fillcolor=white
+	tooltip="BuyerRepo
+
+null"
+	fontcolor=darkgreen
+];
+
+BuyerRepo214818241XXXgetBuyer1808118735[
+	label="+ getBuyer()"
+	style=filled
+	fillcolor=white
+	tooltip="BuyerRepo
+
+null"
+	fontcolor=darkgreen
+];
+
+BuyerRepo214818241XXXhasBuyer1808118735[
+	label="+ hasBuyer()"
+	style=filled
+	fillcolor=white
+	tooltip="BuyerRepo
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2056786170 { 
+   	label=AuctionRepo
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   AuctionRepo214818241XXXaddAuction1002796579[
+	label="+ addAuction()"
+	style=filled
+	fillcolor=white
+	tooltip="AuctionRepo
+
+null"
+	fontcolor=darkgreen
+];
+
+AuctionRepo214818241XXXgetAuction1808118735[
+	label="+ getAuction()"
+	style=filled
+	fillcolor=white
+	tooltip="AuctionRepo
+
+null"
+	fontcolor=darkgreen
+];
+
+AuctionRepo214818241XXXhasAuction1808118735[
+	label="+ hasAuction()"
+	style=filled
+	fillcolor=white
+	tooltip="AuctionRepo
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_215924570 { 
+   	label=Main
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Main730016513XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Main
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_220341089 { 
+   	label=ApisV1Impl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ApisV1Impl730016513XXXaddBuyer1808118735[
+	label="+ addBuyer()"
+	style=filled
+	fillcolor=white
+	tooltip="ApisV1Impl
+
+null"
+	fontcolor=darkgreen
+];
+
+ApisV1Impl730016513XXXaddSeller1808118735[
+	label="+ addSeller()"
+	style=filled
+	fillcolor=white
+	tooltip="ApisV1Impl
+
+null"
+	fontcolor=darkgreen
+];
+
+ApisV1Impl730016513XXXcloseAuction1808118735[
+	label="+ closeAuction()"
+	style=filled
+	fillcolor=white
+	tooltip="ApisV1Impl
+
+null"
+	fontcolor=darkgreen
+];
+
+ApisV1Impl730016513XXXcreateAuction2012146208[
+	label="+ createAuction()"
+	style=filled
+	fillcolor=white
+	tooltip="ApisV1Impl
+
+null"
+	fontcolor=darkgreen
+];
+
+ApisV1Impl730016513XXXcreateBid924985979[
+	label="+ createBid()"
+	style=filled
+	fillcolor=white
+	tooltip="ApisV1Impl
+
+null"
+	fontcolor=darkgreen
+];
+
+ApisV1Impl730016513XXXupdateBid924985979[
+	label="+ updateBid()"
+	style=filled
+	fillcolor=white
+	tooltip="ApisV1Impl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+ApisV1Impl730016513XXXaddBuyer1808118735 -> BuyerRepo214818241XXXaddBuyer64557459;
+ApisV1Impl730016513XXXaddSeller1808118735 -> SellerRepo214818241XXXaddSeller1822147681;
+ApisV1Impl730016513XXXcloseAuction1808118735 -> Auction214868399XXXcloseAuction0;
+ApisV1Impl730016513XXXcloseAuction1808118735 -> AuctionRepo214818241XXXgetAuction1808118735;
+ApisV1Impl730016513XXXcreateAuction2012146208 -> AuctionRepo214818241XXXaddAuction1002796579;
+ApisV1Impl730016513XXXcreateAuction2012146208 -> AuctionRepo214818241XXXhasAuction1808118735;
+ApisV1Impl730016513XXXcreateAuction2012146208 -> SellerRepo214818241XXXgetSeller1808118735;
+ApisV1Impl730016513XXXcreateBid924985979 -> Auction214868399XXXaddBids1239537281;
+ApisV1Impl730016513XXXcreateBid924985979 -> AuctionRepo214818241XXXgetAuction1808118735;
+ApisV1Impl730016513XXXcreateBid924985979 -> BuyerRepo214818241XXXgetBuyer1808118735;
+ApisV1Impl730016513XXXupdateBid924985979 -> Auction214868399XXXupdateBids1239537281;
+ApisV1Impl730016513XXXupdateBid924985979 -> AuctionRepo214818241XXXgetAuction1808118735;
+ApisV1Impl730016513XXXupdateBid924985979 -> BuyerRepo214818241XXXgetBuyer1808118735;
+Auction214868399XXXupdateBids1239537281 -> Amount214868399XXXcompareTo1964981368;
+AuctionRepo214818241XXXgetAuction1808118735 -> AuctionRepo214818241XXXhasAuction1808118735;
+BuyerRepo214818241XXXaddBuyer64557459 -> BuyerRepo214818241XXXhasBuyer1808118735;
+BuyerRepo214818241XXXgetBuyer1808118735 -> BuyerRepo214818241XXXhasBuyer1808118735;
+Main730016513XXXmain1859653459 -> ApisV1Impl730016513XXXaddBuyer1808118735;
+Main730016513XXXmain1859653459 -> ApisV1Impl730016513XXXaddSeller1808118735;
+Main730016513XXXmain1859653459 -> ApisV1Impl730016513XXXcloseAuction1808118735;
+Main730016513XXXmain1859653459 -> ApisV1Impl730016513XXXcreateAuction2012146208;
+Main730016513XXXmain1859653459 -> ApisV1Impl730016513XXXcreateBid924985979;
+Main730016513XXXmain1859653459 -> ApisV1Impl730016513XXXupdateBid924985979;
+SellerRepo214818241XXXaddSeller1822147681 -> SellerRepo214818241XXXhasSeller1808118735;
+SellerRepo214818241XXXgetSeller1808118735 -> SellerRepo214818241XXXhasSeller1808118735;
+    
+}
+@enduml
